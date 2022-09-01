@@ -13,7 +13,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-options(digits=2)
+options(digits=2) 
 ```
 
 # **Introduction**
@@ -147,8 +147,6 @@ fishes %>%
   summarise(mean_sl = mean(sl), sd_sl = (sl), mean_activity = mean(activity), sd_activity = sd(activity), n= n())
 
 # Use flextable to render the summary table in a tidy format
-install.packages("flextable")
-library(flextable)
 flextable(fishes %>% 
   group_by(species) %>% 
   summarise(mean_sl = mean(sl), sd_sl = (sl), mean_activity = mean(activity), sd_activity = sd(activity), n= n()))
@@ -255,6 +253,16 @@ There's not too much to do in this task on the coding front! You just need to cr
 
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high $CO^2$ treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
+```{r}
+# Summary statistics
+summary(fishes$treatment)
+summary(fishes$activity)
+
+# Statistical results to explore whether the control vs high CO2 treatments differ for each of the five fish species.
+
+
+# Make a pretty table summarizing the results for each species
+```
 
 >**Stretch Task**: You can of course do this for each species seperately, but those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
