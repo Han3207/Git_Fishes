@@ -3,9 +3,9 @@
 Uploading it to the GitHub Desktop and then after collaborating the data can be cloned and thus, be reproduced neatly with the R running nicely. 
 
 ## Description of the workflow: 
-The important filesa are the Git_Fishes file as it contains the R markdown, data, output, gitignore and README.file etc.
-The major importants is the OA_activitydat_20190302_BIOL3207.csv data file and the git_fishes_student.Rmd file.
-The output file contains the figure where we do not want this to be commited to the GitHub due to too much storage space taking. So, we need 'gitignore' file as well to help the GitHub ignore to not stage and commit the figure. 
++ The important filesa are the Git_Fishes file as it contains the R markdown, data, output, gitignore and README.file etc.
++ The major importants is the OA_activitydat_20190302_BIOL3207.csv data file and the git_fishes_student.Rmd file.
++ The output file contains the figure where we do not want this to be commited to the GitHub due to too much storage space taking. So, we need 'gitignore' file as well to help the GitHub ignore to not stage and commit the figure. 
 
 ## Meta-data description of the data columns and what they mean: 
 ----------------------------------------------------------------------
