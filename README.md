@@ -8,9 +8,9 @@ The major importants is the OA_activitydat_20190302_BIOL3207.csv data file and t
 The output file contains the figure where we do not want this to be commited to the GitHub due to too much storage space taking. So, we need 'gitignore' file as well to help the GitHub ignore to not stage and commit the figure. 
 
 ## Meta-data description of the data columns and what they mean: 
+----------------------------------------------------------------------
 ### This is found in the main data file 'OA_activitydat_20190302_BIOL3207.csv' data.
-Column Name - Description
---------------------------------------
+(Column Name - Description)
 loc - Location, and year, where the data were collected. AIMS = Australian Institute of Marine Science; LIRS = Lizard Island Research Station
 species	- Species name: acantho = Acanthochromis; Ambon = Pomacentrus amboinensis; Chromis = Chromis atripectoralis; Humbug = Dascyllus aruanus; Lemon = Pomacentrus moluccensis
 treatment	- Elevated CO2 [CO2] (850-1,050 µatm) or control [Control] (400 - 450 µatm) groups
