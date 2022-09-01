@@ -40,7 +40,7 @@ p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick) # basica
 
 While the tasks are meant to get you familiar with how GitHub works you should try and make regular commits as you work your way through. We want to see how often you're using Git. Below, within the `[]` brackets provide the link to your GitHub Repo. Just cut and paste it so we know what the repo name is and where it is. 
 
-(My GitHub Repository)[https://github.com/Han3207/GitFishes_student]
+(My GitHub Repository)[https://github.com/Han3207/Git_Fishes]
 
 By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository". This is how to hyperlink in Rmarkdown documents.
 
@@ -165,7 +165,7 @@ flextable(fishes %>%
 # I had to reload the Github everthing from the beginning so there is no red or green highlights or two files open... But I predict that there would be...
 # Presented online with the two files side by side it shows the previous edited and last recent commit with highlights of the codes across. 
 # Red highlights its what has been deleted or removed from the coding 
-# Green highlights are ones that has been recently added to the coding 
+# Green highlights are ones that has been recently added to the coding (The edited version) 
 ```
 
 # **Task 5**
@@ -190,14 +190,14 @@ Now that you have the figure you may also want to write / save it as a separate 
 
 ```{r, savefig}
 # Use ggsave to save the figure
-ggsave('output/figures/activity_treatment.png',width = 6, height = 4) 
+ggsave('./output/figures/activity_treatment.png',width = 6, height = 4) 
 
 ```
 
 >**Question 6**: Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
 
 ```{r}
-## Write your answer here
+## Adding it has prevented from the figure from being uploaded or open/ stage on the GitHub. 
 ```
 
 Last question for this task. I promise! It's important to think very carefully about what you track and ignore.
@@ -205,7 +205,7 @@ Last question for this task. I promise! It's important to think very carefully a
 >**Question 7**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Do you want to track the files in the pic/ folder on GitHub despite them being .png files? Explain your reasoning. 
 
 ```{r, answer6}
-## Add your answer here
+## Yes. The folders that contains the figures you would need to track on GitHub even if its .png files or else it would not be committed and so cannot open. 
 ```
 
 # **Task 6**
