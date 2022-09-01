@@ -160,6 +160,9 @@ flextable(fishes %>%
 
 ```{r answer5, echo=TRUE, eval=FALSE}
 ## Write your answer here....remember to use '#" in front of your text.
+
+
+# I had to reload the Github everthing from the beginning so there is no red or green highlights or two files open... But I predict that there would be...
 # Presented online with the two files side by side it shows the previous edited and last recent commit with highlights of the codes across. 
 # Red highlights its what has been deleted or removed from the coding 
 # Green highlights are ones that has been recently added to the coding 
