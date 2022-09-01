@@ -91,7 +91,7 @@ Make sure you have added a `data/` folder to your working directory that you jus
 Write your answer in the code chunk below:
 
 ```{r, loaddata, eval = TRUE, echo=TRUE}
-path <- "C:/ANU study/Year 3 2022/BIOL3207/workshop/6/Git_Fishes/data/OA_activitydat_20190302_BIOL3207.csv"
+path <- "./data/OA_activitydat_20190302_BIOL3207.csv"
 path  
 
 data <- read_csv(path)
@@ -103,7 +103,7 @@ Let's say that you added a new data folder that was inside an output folder (i.e
 
 ```{r, write, eval = TRUE, echo=TRUE}
 
-path <- "C:/ANU study/Year 3 2022/BIOL3207/workshop/6/Git_Fishes/output/data/OA_activitydat_20190302_BIOL3207.csv"
+path <- "./output/data/OA_activitydat_20190302_BIOL3207.csv"
 
 write_csv(data, file = path)
 
@@ -177,7 +177,8 @@ Ignoring figures can be important because they take up quite a lot of space in y
 ```{r, prettyfig, fig.align='center', fig.cap="add a legend here"}
 # ggplot figure showing mean activity for each treatment (Control, OA) for each species.
 library(tidyverse)
-ggplot(fishes, aes(x = control, y = treatment, colour = species)) + geom_point()
+ggplot(data = fishes, mapping = aes(x = treatment, y = activity, colour = species)) + 
+  geom_boxplot()
 
 ```
 
@@ -189,6 +190,7 @@ Now that you have the figure you may also want to write / save it as a separate 
 
 ```{r, savefig}
 # Use ggsave to save the figure
+ggsave('output/figures/activity_treatment.png',width = 6, height = 4) 
 
 ```
 
