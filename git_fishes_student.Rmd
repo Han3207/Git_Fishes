@@ -239,6 +239,12 @@ Resolving is easy. Decide on what changes you think are the best to proceed with
 >**Stretch Task**: Try creating another conflict in the `collabFig` code chunk of the Rmarkdown file. Resolve the conflict again. More practice doing this is always good!
 
 Once you have figured out how to create and solve conflicts it's time to update the README file with a little more detail about your project and the general workflow. The *GitHub* webpage uses the README file as a sort of introduction to the project. 
+```{r}
+# When we created conflict we found that in the GitHub Desktop it would not allow the person who uploaded after the person who has already uploaded the changes in the same place. It would come up with a notification saying that there is a conflict and forced to fetch conflict and so making us show what is there to resolve. 
+
+# For the README.file we just used the RMarkdown file instead. Which has shown with the similar specific markers mentioned above. This is to show that we did do the task just witnessed the conflict and conflict markers and text all in the R markdown. 
+```
+
 
 **Task**: Provide details about the workflow (i.e., which files are used, when and why) and write a detailed description of the data file used. Include the details about what the column means and which data file someone should use. 
 
