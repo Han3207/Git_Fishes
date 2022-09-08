@@ -254,14 +254,25 @@ There's not too much to do in this task on the coding front! You just need to cr
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high $CO^2$ treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 ```{r}
-# Summary statistics
-summary(fishes$treatment)
-summary(fishes$activity)
+# Statistical results of control vs high CO2 treatments for each of the five fish species.
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "ambon"], fishes$activity[fishes$treatment == "control" & fishes$species == "ambon"])
 
-# Statistical results to explore whether the control vs high CO2 treatments differ for each of the five fish species.
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "chromis"], fishes$activity[fishes$treatment == "control" & fishes$species == "chromis"])
 
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "acantho"], fishes$activity[fishes$treatment == "control" & fishes$species == "acantho"])
+
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "humbug"], fishes$activity[fishes$treatment == "control" & fishes$species == "humbug"])
+
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "lemon"], fishes$activity[fishes$treatment == "control" & fishes$species == "lemon"])
+
+t.test(fishes$activity[fishes$treatment == "CO2" & fishes$species == "whitedams"], fishes$activity[fishes$treatment == "control" & fishes$species == "whitedams"])
 
 # Make a pretty table summarizing the results for each species
+tablesum <- as.data.frame(rbind(c('18', '17', '-6.2, 8.3', '0.3', '41', '0.8'), c('25', '26', '-8.7, 6.0', '-0.4', '25', '0.7'), c('27', '29', '-4.8, 1.6','-1', '174', '0.3'), c('40', '35', '0.83, 9.90', '2', '124', '0.02'), c('26', '20', '-0.55, 13.04', '2,42', '0.07'), c('24', '27', '-5.9, 1.6', '-1', '118', '0.3')))
+dimnames(tablesum) <- list(species = c("ambon", "chromis", "acantho", "humbug", "lemon", "whitedams"), 
+                           party = c("mean of CO2 activity", "mean of control activity", "95% Confidence intervals", "t-statistic", "df", "p-value"))
+
+tablesum
 ```
 
 >**Stretch Task**: You can of course do this for each species seperately, but those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
