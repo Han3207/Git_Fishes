@@ -272,7 +272,7 @@ tablesum <- as.data.frame(rbind(c('18', '17', '-6.2, 8.3', '0.3', '41', '0.8'), 
 dimnames(tablesum) <- list(species = c("ambon", "chromis", "acantho", "humbug", "lemon", "whitedams"), 
                            party = c("mean of CO2 activity", "mean of control activity", "95% Confidence intervals", "t-statistic", "df", "p-value"))
 
-tablesum
+flextable(tablesum)
 ```
 
 >**Stretch Task**: You can of course do this for each species seperately, but those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
